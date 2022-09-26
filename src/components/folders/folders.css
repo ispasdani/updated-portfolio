@@ -1,8 +1,32 @@
-.browserFrameBig {
+/*/////*/
+.folderIconBtn {
+  height: auto;
+  width: 80px;
+  transition: 0.3s all ease-in-out;
+  margin: 20px;
+}
+
+.folderIconBtn:hover {
+  transform: scale(1.1);
+}
+
+.folderImg {
+  width: 80px;
+  height: 80px;
+}
+
+.folderIconBtn p {
+  font-family: "Poppins", sans-serif;
+  color: #51fcff;
+  margin: 0;
+}
+
+/**/
+.browserFrameFolder {
   position: absolute;
-  bottom: 50%;
-  right: 50%;
-  transform: translate(50%, 50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 60rem;
   height: 35rem;
   border-left: 5px solid;
@@ -12,14 +36,14 @@
   background-color: #14023e;
   z-index: 1000;
   margin: 20px;
-  transition: 0.5s all ease-in-out;
+  transition: 0.3s all ease-in-out;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
 }
 
-.browserTopBarBig {
+.browserTopBarBigFolder {
   width: 100%;
   height: 2.5rem;
   background: rgb(2, 0, 36);
@@ -29,19 +53,19 @@
   align-items: center;
 }
 
-.browserTopBarBig p {
+.browserTopBarBigFolder p {
   font-size: 2.5rem;
   margin: 0px 10px;
   transition: 0.5s all ease-in-out;
 }
 
-.browserTopBarTitle {
+.browserTopBarTitleFolder {
   font-family: "Poppins", sans-serif;
   color: #51fcff;
   letter-spacing: 2px;
 }
 
-.browserTopBarIcons {
+.browserTopBarIconsFolder {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,8 +76,7 @@
   transform: rotate(360deg);
 }
 
-.browserContent {
+.browserContentFolder {
   height: 32.5rem;
   width: 100%;
-  position: relative;
 }

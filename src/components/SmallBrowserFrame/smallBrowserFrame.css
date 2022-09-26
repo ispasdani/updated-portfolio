@@ -1,38 +1,117 @@
 .browserFrame {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 18.75rem;
-    height: 12.5rem;
-    border-left: 5px solid;
-    border-right: 5px solid;
-    border-bottom: 5px solid;
-    border-image: linear-gradient(to right, #e100ff, #51fcff) 1;
-    background-color: #14023e;
-    z-index: 1000;
-    margin: 20px;
-    transition: 0.5s all ease-in-out;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 18.75rem;
+  height: 12.5rem;
+  border-left: 5px solid;
+  border-right: 5px solid;
+  border-bottom: 5px solid;
+  border-image: linear-gradient(to right, #e100ff, #51fcff) 1;
+  background-color: #14023e;
+  z-index: 1000;
+  margin: 20px;
+  transition: 0.5s all ease-in-out;
+}
+
+.browserFrame:hover {
+  transform: translateY(-20px) translateX(-20px);
+}
+
+.browserTopBar {
+  position: relative;
+  width: 100%;
+  height: 1.875rem;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, #e100ff 40%, #51fcff 100%);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 2;
+}
+
+.browserTopBar p {
+  font-size: 2rem;
+  margin: 0px 10px;
+}
+
+.browserTopBar p:hover {
+  color: #e100ff;
+}
+
+.browserText {
+  color: #51fcff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.browserText {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.glitch {
+  color: #00fffc;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0;
+  position: relative;
+  text-shadow: 0.05em 0 0 white, -0.03em -0.04em 0 #fc00ff,
+    0.025em 0.04em 0 #fffc00;
+  animation: glitch 725ms infinite;
+  font-family: "Press Start 2P", cursive;
+}
+
+.glitch span {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.glitch span:first-child {
+  animation: glitch 500ms infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+  transform: translate(-0.04em, -0.03em);
+  opacity: 0.75;
+}
+
+.glitch span:last-child {
+  animation: glitch 375ms infinite;
+  clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+  transform: translate(0.04em, 0.03em);
+  opacity: 0.75;
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 0.05em 0 0 white, -0.03em -0.04em 0 #fc00ff,
+      0.025em 0.04em 0 #fffc00;
   }
-  
-  .browserFrame:hover {
-    transform: translateY(-20px) translateX(-20px);
+  15% {
+    text-shadow: 0.05em 0 0 white, -0.03em -0.04em 0 #fc00ff,
+      0.025em 0.04em 0 #fffc00;
   }
-  
-  .browserTopBar {
-    width: 100%;
-    height: 1.875rem;
-    background: rgb(2, 0, 36);
-    background: linear-gradient(90deg, #e100ff 40%, #51fcff 100%);
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+  16% {
+    text-shadow: -0.05em -0.025em 0 white, 0.025em 0.035em 0 #fc00ff,
+      -0.05em -0.05em 0 #fffc00;
   }
-  
-  .browserTopBar p {
-    font-size: 2rem;
-    margin: 0px 10px;
+  49% {
+    text-shadow: -0.05em -0.025em 0 white, 0.025em 0.035em 0 #fc00ff,
+      -0.05em -0.05em 0 #fffc00;
   }
-  
-  .browserTopBar p:hover {
-    color: #e100ff;
+  50% {
+    text-shadow: 0.05em 0.035em 0 white, 0.03em 0 0 #fc00ff, 0 -0.04em 0 #fffc00;
   }
+  99% {
+    text-shadow: 0.05em 0.035em 0 white, 0.03em 0 0 #fc00ff, 0 -0.04em 0 #fffc00;
+  }
+  100% {
+    text-shadow: -0.05em 0 0 white, -0.025em -0.04em 0 #fc00ff,
+      -0.04em -0.025em 0 #fffc00;
+  }
+}
