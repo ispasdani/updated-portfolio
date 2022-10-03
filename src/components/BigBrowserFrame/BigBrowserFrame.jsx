@@ -1,29 +1,32 @@
 import React, { useContext } from "react";
 import { BrowserFrameContext } from "../../contexts/BrowserFrameContext";
 import "./bigBrowserFrame.css";
-import { About } from "../folders/About";
 
-export const BigBrowserFrame = () => {
+
+export const BigBrowserFrame = (props) => {
   const { setSwitchBrowser } = useContext(BrowserFrameContext);
 
   return (
     <div className="browserFrameBig">
       <div className="browserTopBarBig">
-        <div className="browserTopBarTitle">Explore more</div>
-        <div className="browserTopBarIcons">
+        <div className="browserTopBarTitleBig">Explore more</div>
+        <div className="browserTopBarIconsBig">
           <p
             onClick={() => {
               setSwitchBrowser(false);
             }}
+            className='browserTopBarLineDownBig'
           >
-            &#45;
           </p>
-          <p>&#9633;</p>
-          <p>&#215;</p>
+          <p className="browserTopBarSquareBig"></p>
+          <p className="browserTopBarCloseBig">
+            <span></span>
+            <span></span>
+          </p>
         </div>
       </div>
-      <div className="browserContent">
-        <About />
+      <div className="browserContentBig">
+        {props.children}
       </div>
     </div>
   );

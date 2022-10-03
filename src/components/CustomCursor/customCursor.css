@@ -13,8 +13,8 @@
   .secondary-cursor {
     z-index: 1000;
     border-radius: 50%;
-    height: 17px;
-    width: 17px;
+    height: 14px;
+    width: 14px;
     background-color: #ff10f0;
     border: 2px solid #ff10f0;
     pointer-events: none;

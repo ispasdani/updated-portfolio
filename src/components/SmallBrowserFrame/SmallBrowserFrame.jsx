@@ -2,35 +2,33 @@ import React, { useContext } from "react";
 import { BrowserFrameContext } from "../../contexts/BrowserFrameContext";
 import "./smallBrowserFrame.css";
 
-export const SmallBrowserFrame = () => {
+export const SmallBrowserFrame = (props) => {
   const { setSwitchBrowser } = useContext(BrowserFrameContext);
 
   return (
-    <div
-      className="browserFrame"
-      onClick={() => {
-        setSwitchBrowser(true);
-      }}
-    >
-      <div className="browserTopBar">
-        <p>&#45;</p>
+    <div className="browserFrameSmall" onClick={() => {
+      setSwitchBrowser(true);
+    }}>
+    <div className="browserTopBarSmall">
+      <div className="browserTopBarTitleSmall">Explore more</div>
+      <div className="browserTopBarIconsSmall">
         <p
-          onClick={() => {
-            setSwitchBrowser(true);
-          }}
+          
+          className='browserTopBarLineDownSmall'
         >
-          &#9633;
         </p>
-        <p>&#215;</p>
-      </div>
-
-      <div className="browserText">
-        <p className="glitch">
-          <span aria-hidden="true">EXPLORE MORE</span>
-          EXPLORE MORE
-          <span aria-hidden="true">EXPLORE MORE</span>
+        <p className="browserTopBarSquareSmall" onClick={() => {
+            setSwitchBrowser(true);
+          }}></p>
+        <p className="browserTopBarCloseSmall">
+          <span></span>
+          <span></span>
         </p>
       </div>
     </div>
+    <div className="browserContentSmall">
+      {props.children}
+    </div>
+  </div>
   );
 };

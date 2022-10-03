@@ -1,9 +1,9 @@
-.browserFrame {
+.browserFrameSmall {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 18.75rem;
-  height: 12.5rem;
+  width: 21rem;
+  height: 13.5rem;
   border-left: 5px solid;
   border-right: 5px solid;
   border-bottom: 5px solid;
@@ -12,106 +12,100 @@
   z-index: 1000;
   margin: 20px;
   transition: 0.5s all ease-in-out;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
 }
 
-.browserFrame:hover {
+.browserFrameSmall:hover {
   transform: translateY(-20px) translateX(-20px);
 }
 
-.browserTopBar {
-  position: relative;
+.browserTopBarSmall {
   width: 100%;
-  height: 1.875rem;
+  height: 2.5rem;
   background: rgb(2, 0, 36);
   background: linear-gradient(90deg, #e100ff 40%, #51fcff 100%);
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-  z-index: 2;
 }
 
-.browserTopBar p {
-  font-size: 2rem;
-  margin: 0px 10px;
-}
-
-.browserTopBar p:hover {
-  color: #e100ff;
-}
-
-.browserText {
+.browserTopBarTitleSmall {
+  font-family: "Poppins", sans-serif;
   color: #51fcff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  letter-spacing: 2px;
 }
 
-.browserText {
-  width: 100%;
-  height: 100%;
+.browserTopBarIconsSmall {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.glitch {
-  color: #00fffc;
-  font-size: 1.3rem;
-  font-weight: bold;
-  margin: 0;
-  position: relative;
-  text-shadow: 0.05em 0 0 white, -0.03em -0.04em 0 #fc00ff,
-    0.025em 0.04em 0 #fffc00;
-  animation: glitch 725ms infinite;
-  font-family: "Press Start 2P", cursive;
+.browserTopBarSquareSmall {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #e100ff;
+  margin: 0px 10px;
+  transition: 0.5s all ease-in-out;
 }
 
-.glitch span {
+.browserTopBarSquareSmall:hover {
+  transform: rotate(360deg);
+}
+
+.browserTopBarLineDownSmall {
+  width: 18px;
+  height: 18px;
+  border-bottom: 2px solid #e100ff;
+  margin: 0px 10px;
+  transition: 0.5s all ease-in-out;
+}
+
+.browserTopBarLineDownSmall:hover {
+  transform: rotate(360deg)
+}
+
+.browserTopBarCloseSmall {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  position: relative;
+  color: #e100ff;
+  margin-left: 5px;
+  transition: 0.5s all ease-in-out;
+}
+
+.browserTopBarCloseSmall:hover {
+  transform: rotate(360deg);
+}
+
+.browserTopBarCloseSmall span:nth-child(1) {
+  width: 25px;
+  height: 2px;
+  background-color: #e100ff;
+  transform: rotate(45deg);
   position: absolute;
   top: 0;
   left: 0;
 }
 
-.glitch span:first-child {
-  animation: glitch 500ms infinite;
-  clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
-  transform: translate(-0.04em, -0.03em);
-  opacity: 0.75;
+.browserTopBarCloseSmall span:nth-child(2) {
+  width: 25px;
+  height: 2px;
+  background-color: #e100ff;
+  transform: rotate(-45deg);
 }
 
-.glitch span:last-child {
-  animation: glitch 375ms infinite;
-  clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
-  transform: translate(0.04em, 0.03em);
-  opacity: 0.75;
-}
+.browserContentSmall {
+  height: 32.5rem;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
 
-@keyframes glitch {
-  0% {
-    text-shadow: 0.05em 0 0 white, -0.03em -0.04em 0 #fc00ff,
-      0.025em 0.04em 0 #fffc00;
-  }
-  15% {
-    text-shadow: 0.05em 0 0 white, -0.03em -0.04em 0 #fc00ff,
-      0.025em 0.04em 0 #fffc00;
-  }
-  16% {
-    text-shadow: -0.05em -0.025em 0 white, 0.025em 0.035em 0 #fc00ff,
-      -0.05em -0.05em 0 #fffc00;
-  }
-  49% {
-    text-shadow: -0.05em -0.025em 0 white, 0.025em 0.035em 0 #fc00ff,
-      -0.05em -0.05em 0 #fffc00;
-  }
-  50% {
-    text-shadow: 0.05em 0.035em 0 white, 0.03em 0 0 #fc00ff, 0 -0.04em 0 #fffc00;
-  }
-  99% {
-    text-shadow: 0.05em 0.035em 0 white, 0.03em 0 0 #fc00ff, 0 -0.04em 0 #fffc00;
-  }
-  100% {
-    text-shadow: -0.05em 0 0 white, -0.025em -0.04em 0 #fc00ff,
-      -0.04em -0.025em 0 #fffc00;
-  }
-}
+

@@ -29,31 +29,75 @@
   align-items: center;
 }
 
-.browserTopBarBig p {
-  font-size: 2.5rem;
-  margin: 0px 10px;
-  transition: 0.5s all ease-in-out;
-}
-
-.browserTopBarTitle {
+.browserTopBarTitleBig {
   font-family: "Poppins", sans-serif;
   color: #51fcff;
   letter-spacing: 2px;
 }
 
-.browserTopBarIcons {
+.browserTopBarIconsBig {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #e100ff;
 }
 
-.browserTopBarBig p:hover {
+.browserTopBarSquareBig {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #e100ff;
+  margin: 0px 10px;
+  transition: 0.5s all ease-in-out;
+}
+
+.browserTopBarSquareBig:hover {
   transform: rotate(360deg);
 }
 
-.browserContent {
+.browserTopBarLineDownBig {
+  width: 18px;
+  height: 18px;
+  border-bottom: 2px solid #e100ff;
+  margin: 0px 10px;
+  transition: 0.5s all ease-in-out;
+}
+
+.browserTopBarLineDownBig:hover {
+  transform: rotate(360deg)
+}
+
+.browserTopBarCloseBig {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  position: relative;
+  color: #e100ff;
+  margin-left: 5px;
+  transition: 0.5s all ease-in-out;
+}
+
+.browserTopBarCloseBig:hover {
+  transform: rotate(360deg);
+}
+
+.browserTopBarCloseBig span:nth-child(1) {
+  width: 25px;
+  height: 2px;
+  background-color: #e100ff;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.browserTopBarCloseBig span:nth-child(2) {
+  width: 25px;
+  height: 2px;
+  background-color: #e100ff;
+  transform: rotate(-45deg);
+}
+
+.browserContentBig {
   height: 32.5rem;
   width: 100%;
   position: relative;
-}
+} 
